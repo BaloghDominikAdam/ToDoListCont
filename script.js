@@ -12,13 +12,61 @@ let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 function renderTasks(){
     todoList.innerHTML = "";
     tasks.forEach((task, index) => {
+
+       
+ const successBtn = document.createElement("button")
+        successBtn.textContent = "✅"
+        successBtn.style.marginRight = "15px";
+        successBtn.style.background = "transparent";
+        successBtn.style.border = "none";
+        successBtn.style.cursor = "pointer";
+        successBtn.style.fontSize = "20px";
+
+        successBtn.addEventListener("click", () => {
+            tasks.splice(index,1);
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+            renderTasks();
+        } )
+        
         const div = document.createElement("div");
+
+       
+
+
         const h3 = document.createElement("h3");
+
         div.classList.add("feladat");
+
         h3.textContent = task;
+
+
+        const deleteBtn = document.createElement("button")
+        deleteBtn.textContent = "❌";
+        deleteBtn.style.marginLeft = "15px";
+        deleteBtn.style.background = "transparent";
+        deleteBtn.style.border = "none";
+        deleteBtn.style.cursor = "pointer";
+        deleteBtn.style.fontSize = "20px";
+
+
+        
+
+
+        deleteBtn.addEventListener("click", () => {
+            tasks.splice(index,1);
+            localStorage.setItem("tasks", JSON.stringify(tasks));
+            
+            renderTasks();
+        })
+
         todoList.appendChild(div);
+        h3.appendChild(successBtn)
         div.appendChild(h3);
+        h3.appendChild(deleteBtn); 
+        
+        
     });
+
 }
 
 addButton.addEventListener("click", () => {
