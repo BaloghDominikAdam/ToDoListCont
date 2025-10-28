@@ -59,10 +59,14 @@ function renderTasks(){
             renderTasks();
         })
 
+
+        
         todoList.appendChild(div);
-        h3.appendChild(successBtn)
         div.appendChild(h3);
         h3.appendChild(deleteBtn); 
+        h3.appendChild(successBtn)
+        
+        
         
         
     });
@@ -118,30 +122,10 @@ function hozzaAdas(){
     const ertek = eloHivo.value.trim();
     if (ertek === "") return;
 
-    const nemkesz = document.getElementById("hozzaadas")
-
-    const id = generateId();
-
-    const ujfeladat = document.createElement("div")
-
-
-    const ujfeladatleiras = document.createElement("h3")
-    
-    
-    ujfeladatleiras.textContent = ertek;
-
-
-    ujfeladat.classList.add("feladat")
-    ujfeladat.setAttribute("data-id", id);
-
-
-
-    ujfeladat.appendChild(ujfeladatleiras)
-
-    nemkesz.appendChild(ujfeladat)
-
-    
-    eloHivo.value = ""
+    tasks.push(ertek);
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+            input.value = "";
+            renderTasks();
     
 
 
