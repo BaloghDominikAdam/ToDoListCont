@@ -1,0 +1,159 @@
+body{
+    background-color: rgb(78, 78, 78);
+}
+.inputTools{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainText{
+    color: rgb(255, 123, 0);
+}
+
+.hozzaAdGomb{
+    display: none;
+    margin-left: 8px;
+}
+
+.Plus, .Minus{
+    width: 55px;
+}
+
+.Plus, .hozzaAdGomb, .Minus{
+    background-color: rgb(255, 123, 0);
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 25px rgba(163, 163, 163, 0.671);
+    border: none;
+    vertical-align: top;
+    transition: border-radius .15s;
+    padding: 15px;
+}
+
+.Plus:hover, .hozzaAdGomb:hover, .Minus:hover{
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#hideTextInput{
+    display: none;
+}
+
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+}
+
+
+
+
+
+.inputValue{
+    display: none;
+    width: 325px;
+    height: 50px;
+    border-radius: 15px;
+    border: none;
+    font-size: 25px;
+        box-shadow: 5px 5px 25px rgba(163, 163, 163, 0.671);
+        margin-left: 35px;
+        text-align: center;
+}
+
+
+
+.feladatok{
+    width: 50%;
+
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+
+}
+
+
+.nemKesz, .kesz{
+    margin: auto;
+    height: auto;
+    width: 400px;
+    background-color: white;
+    padding: 25px;
+        border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+    text-align: center;
+            box-shadow: 5px 5px 25px rgba(163, 163, 163, 0.671);
+
+}
+
+
+/* .nemKesz h3{
+    color: rgb(255, 0, 0);
+}
+.kesz h3{
+    color: rgb(9, 184, 3);
+} */
+
+
+.feladat{
+position: relative;
+    width: 95%;
+    margin:auto;
+    height: 95%;
+    height: auto;
+    background-color: rgb(255, 123, 0);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 3px;
+    color: white;
+    transition: border-radius .15s, width .15s, height .15s;
+    margin-top: 9px;
+    
+}
+
+
+.feladat:hover{
+    background-color: rgb(255, 175, 99);
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 3px 3px 25px rgba(163, 163, 163, 0.671);
+    width: 100%;
+    height: 100%;
+    
+
+
+}
+.check{
+    margin-right: 25px;
+}
+
+.iconka, .check{
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin-left: 25px;
+    vertical-align:middle;
+
+
+
+
+    
+}
+
+
+.pipa:hover{
+    cursor: pointer;
+}
+
+.feladat:hover .iconka, .feladat:hover .check{
+    display: inline-block;
+}
+
+
+
+.hozzaAdGomb{
+    
+}
