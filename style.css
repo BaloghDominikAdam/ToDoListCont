@@ -89,15 +89,6 @@ h1{
 
 }
 
-
-/* .nemKesz h3{
-    color: rgb(255, 0, 0);
-}
-.kesz h3{
-    color: rgb(9, 184, 3);
-} */
-
-
 .feladat{
 position: relative;
     width: 95%;
@@ -152,8 +143,19 @@ position: relative;
     display: inline-block;
 }
 
+.feladatok{
+    vertical-align: top;
+}
 
 
-.hozzaAdGomb{
-    
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+}
+
+.kesz{
+    margin-top: 0;
 }
