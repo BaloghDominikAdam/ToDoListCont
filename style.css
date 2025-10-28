@@ -77,7 +77,7 @@ h1{
 }
 
 
-.nemKeszContainer, .kesz{
+.nemKeszContainer, .keszContainer{
     margin: auto;
     height: auto;
     width: 400px;
@@ -90,6 +90,9 @@ h1{
 
 }
 
+.keszContainer{
+    margin-top: 0;
+}
 .feladat{
 position: relative;
     width: 95%;
