@@ -1,5 +1,9 @@
+:root{
+    --back-color: rgb(78, 78, 78)
+}
+
 body{
-    background-color: rgb(78, 78, 78);
+    background-color: var(--back-color);
 }
 .inputTools{
     display: flex;
@@ -117,10 +121,8 @@ position: relative;
     box-shadow: 3px 3px 25px rgba(163, 163, 163, 0.671);
     width: 100%;
     height: 100%;
-    
-
-
 }
+
 .check{
     margin-right: 25px;
 }
@@ -130,12 +132,7 @@ position: relative;
     width: 30px;
     height: 30px;
     margin-left: 25px;
-    vertical-align:middle;
-
-
-
-
-    
+    vertical-align:middle;  
 }
 
 
