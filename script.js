@@ -1,165 +1,24 @@
-// const eloHivo = document.querySelector(".inputValue");
-// const hozzaAdGomb = document.querySelector(".hozzaAdGomb");
-// const iconka = document.querySelector(".iconka");
-// const plusgomb = document.querySelector(".Plus");
-// const minusgomb = document.querySelector(".Minus");
-// const input = document.getElementById("taskInput");
-// const addButton = document.getElementById("addTextButton");
-// const todoList = document.querySelector(".nemKesz");
-// const successList = document.querySelector(".kesz");
+let darkmode = localStorage.getItem('darkmode')
+const darkmodeBtn = document.getElementById('darkmodeBtn')
 
-// let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+function enableDarkmode(){
+    document.body.classList.add('darkmode')
+    localStorage.setItem('darkmode', 'active')
+}
 
-// let completedTasks = JSON.parse(localStorage.getItem("completedTasks")) || [];
+function disableDarkmode(){
+    document.body.classList.remove('darkmode')
+    localStorage.setItem('darkmode', null)
+}
 
-// function renderTasks(){
-//     todoList.innerHTML = "";
-//     tasks.forEach((task, index) => {
+if(darkmode === "active") enableDarkmode()
 
-       
-//         const successBtn = document.createElement("button")
-//         successBtn.textContent = "✅";
-//         successBtn.style.marginRight = "15px";
-//         successBtn.style.background = "transparent";
-//         successBtn.style.border = "none";
-//         successBtn.style.cursor = "pointer";
-//         successBtn.style.fontSize = "20px";
-//         successBtn.addEventListener("click", () => {
-//             completedTasks.push(task);
-//             tasks.splice(index,1);
-//             updateStorage();
-//             renderTasks();
+darkmodeBtn.addEventListener("click", () => {
+    darkmode = localStorage.getItem('darkmode')
+    darkmode !== "active" ? enableDarkmode() : disableDarkmode()
+})
 
-//             // successList.textContent = "";
-//             // // tasks.push(index,1);
-
-//             // const keszDiv = document.createElement("div");
-
-//             // keszDiv.classList.add("feladat");
-//             // keszDiv.appendChild(index, 1);
-
-//             // succesList.appendChild(keszDiv);
-
-//             // localStorage.setItem("tasks", JSON.stringify(tasks));
-//             // renderTasks();
-//         } )
-        
-//         const div = document.createElement("div");
-
-       
-
-
-//         const h3 = document.createElement("h3");
-
-//         div.classList.add("feladat");
-
-//         h3.textContent = task;
-
-
-//         const deleteBtn = document.createElement("button")
-//         deleteBtn.textContent = "❌";
-//         deleteBtn.style.marginLeft = "15px";
-//         deleteBtn.style.background = "transparent";
-//         deleteBtn.style.border = "none";
-//         deleteBtn.style.cursor = "pointer";
-//         deleteBtn.style.fontSize = "20px";
-
-
-        
-
-
-//         deleteBtn.addEventListener("click", () => {
-//             tasks.splice(index,1);
-//             localStorage.setItem("tasks", JSON.stringify(tasks));
-            
-//             renderTasks();
-//         })
-
-
-        
-//         todoList.appendChild(div);
-//         div.appendChild(h3);
-//         h3.appendChild(deleteBtn); 
-//         h3.appendChild(successBtn)       
-//     });
-
-//     completedTasks.forEach((task, index) => {
-//         const div = document.createElement("div");
-//         div.classList.add("feladat");
-
-//         const h3 = document.createElement("h3");
-//         h3.textContent = task;
-
-
-//         successList.appendChild(div);
-//         div.appendChild(h3);
-//         h3.appendChild(deleteBtn);
-//         h3.appendChild(undoBtn);
-//     });
-// }
-
-// function updateStorage() {
-//     localStorage.setItem("tasks", JSON.stringify(tasks));
-//     localStorage.setItem("completedTasks", JSON.stringify(completedTasks));
-// }
-
-// addButton.addEventListener("click", (event) => {
-//     event.preventDefault();
-//     const newTask = input.value.trim();
-
-//     if(newTask){
-//         tasks.push(newTask);
-//         // localStorage.setItem('tasks', JSON.stringify(tasks));
-//         updateStorage();
-//         input.value = "";
-//         renderTasks();
-//     }
-// });
-
-// renderTasks();
-
-// function generateId() {
-//   return "task-" + Date.now();
-// }
-
-// function showInput(){
-
-//     event.preventDefault();
-
-//     eloHivo.style.display = "inline-block"
-//     hozzaAdGomb.style.display = "inline-block"
-//     plusgomb.style.display = "none"
-//     minusgomb.style.display = "inline-block"
-
-// }
-
-// function hideInput(){
-//     event.preventDefault();
-
-
-//     plusgomb.style.display = "inline-block"
-//     minusgomb.style.display = "none"
-//     eloHivo.style.display = "none"
-//     hozzaAdGomb.style.display = "none"
-// }
-
-
-// function hozzaAdas(){
-
-
-    
-//     event.preventDefault();
-
-
-//     const ertek = eloHivo.value.trim();
-//     if (ertek === "") return;
-
-//     tasks.push(ertek);
-//             localStorage.setItem('tasks', JSON.stringify(tasks));
-//             input.value = "";
-//             renderTasks();
-// }
-
+//-----------------------------------------------------------
 const eloHivo = document.querySelector(".inputValue");
 const hozzaAdGomb = document.querySelector(".hozzaAdGomb");
 const plusgomb = document.querySelector(".Plus");

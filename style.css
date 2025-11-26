@@ -2,6 +2,40 @@
     --back-color: rgb(78, 78, 78)
 }
 
+#darkmodeBtn{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background-color: white;
+    border-color: rgb(255, 123, 0);
+}
+
+.darkmode{
+    background-color: white;
+}
+
+#darkmodeBtn svg{
+    fill: black;
+}
+
+#darkmodeBtn svg:first-child{
+    display: none;
+}
+
+.darkmode #darkmodeBtn svg:last-child{
+    display: none;
+}
+
+.darkmode #darkmodeBtn svg:first-child{
+    display: block;
+}
+
 body{
     background-color: var(--back-color);
 }
