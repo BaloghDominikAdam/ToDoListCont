@@ -12,8 +12,20 @@
     position: fixed;
     right: 20px;
     top: 20px;
-    background-color: white;
-    border-color: rgb(255, 123, 0);
+    background-color: rgb(226, 192, 0);
+    border: solid rgb(180, 180, 180);
+    box-shadow: -7px 7px 15px rgba(163, 163, 163, 0.671);
+    border-left-color: white;
+}
+
+body.darkmode .nemKeszContainer{
+    border: solid black;
+    box-shadow: 7px 7px 15px black;
+}
+
+body.darkmode .keszContainer{
+    border: solid black;
+    box-shadow: 7px 7px 15px black;
 }
 
 .darkmode{
